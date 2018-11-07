@@ -10,6 +10,13 @@ namespace KalleFBankALM.Controllers
 {
     public class HomeController : Controller
     {
+        private IBankRepository _bankRepository;
+
+        public HomeController(IBankRepository bankRepo)
+        {
+            _bankRepository = bankRepo;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -38,6 +45,10 @@ namespace KalleFBankALM.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public IActionResult ListCustomers()
+        {
+            return View();
         }
     }
 }
