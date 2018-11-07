@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalleFBankALM", "KalleFBankALM\KalleFBankALM.csproj", "{6DCCFF84-1945-416C-95AA-5A4A16B4A106}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalleFBankALM.TEST", "KalleFBankALM.TEST\KalleFBankALM.TEST.csproj", "{E8AE3B0B-9A34-416F-8229-0888A1113749}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6DCCFF84-1945-416C-95AA-5A4A16B4A106}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DCCFF84-1945-416C-95AA-5A4A16B4A106}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DCCFF84-1945-416C-95AA-5A4A16B4A106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8AE3B0B-9A34-416F-8229-0888A1113749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8AE3B0B-9A34-416F-8229-0888A1113749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8AE3B0B-9A34-416F-8229-0888A1113749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8AE3B0B-9A34-416F-8229-0888A1113749}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
