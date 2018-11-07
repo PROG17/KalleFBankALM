@@ -1,7 +1,24 @@
-﻿
+﻿@model IEnumerable<Customer>
+
 @{
     ViewData["Title"] = "ListCustomers";
 }
 
 <h2>ListCustomers</h2>
+
+@foreach (var customer in Model) {
+<div>
+    <h3>@customer.Name</h3>
+    @foreach (var account in customer.CustomerAccounts)
+    {
+        if (account == null)
+        {
+            break;
+        }
+        <ul>
+            <li>Account#: @account.AccountNumber, Balance: @account.Balance</li> 
+        </ul>
+    }
+</div>
+}
 

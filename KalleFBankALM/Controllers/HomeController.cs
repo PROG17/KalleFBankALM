@@ -48,7 +48,7 @@ namespace KalleFBankALM.Controllers
         }
         public IActionResult ListCustomers()
         {
-            return View();
+            return View(_bankRepository.Customers);
         }
     }
 }
