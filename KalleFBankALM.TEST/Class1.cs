@@ -1,8 +1,15 @@
 ﻿using System;
+using Xunit;
+
 
 namespace KalleFBankALM.TEST
 {
-    public class Class1
+    public class BankAppTester
     {
+        [Fact]
+        public void TestExemple()
+        {
+            Assert.True(true);
+        }
     }
 }
