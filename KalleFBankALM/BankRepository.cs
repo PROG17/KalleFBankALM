@@ -48,7 +48,7 @@ namespace KalleFBankALM
                         Balance = 300m
                     }
                 },
-                CustomerId = 1,
+                CustomerId = 3,
                 Name = "Kalle"
             },
 

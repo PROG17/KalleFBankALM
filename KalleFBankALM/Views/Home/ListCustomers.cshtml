@@ -4,11 +4,11 @@
     ViewData["Title"] = "ListCustomers";
 }
 
-<h2>ListCustomers</h2>
+<h2>List of Customers</h2>
 
 @foreach (var customer in Model) {
 <div>
-    <h3>@customer.Name</h3>
+    <h3>@customer.Name, Kundnummer: @customer.CustomerId</h3>
     @foreach (var account in customer.CustomerAccounts)
     {
         if (account == null)
