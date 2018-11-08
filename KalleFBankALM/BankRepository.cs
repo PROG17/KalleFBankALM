@@ -16,11 +16,7 @@ namespace KalleFBankALM
             {
                 CustomerAccounts = new List<Account>
                 {
-                    new Account
-                    {
-                        AccountNumber = "12345",
-                        Balance = 100m
-                    }
+                    new Account("12345", 100m)
                 },
                 CustomerId = 1,
                 Name = "Jens"
@@ -29,11 +25,7 @@ namespace KalleFBankALM
             {
                 CustomerAccounts = new List<Account>
                 {
-                    new Account
-                    {
-                        AccountNumber = "54321",
-                        Balance = 200m
-                    }
+                    new Account("54321", 200m)
                 },
                 CustomerId = 2,
                 Name = "Egi"
@@ -42,11 +34,7 @@ namespace KalleFBankALM
             {
                 CustomerAccounts = new List<Account>
                 {
-                    new Account
-                    {
-                        AccountNumber = "345123",
-                        Balance = 300m
-                    }
+                    new Account("345123", 300m)
                 },
                 CustomerId = 3,
                 Name = "Kalle"
