@@ -2,3 +2,34 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+$(document).ready(function(){
+
+    
+    $("#WithdrawButton").click(function () {
+
+        var accNumber = $("#AccountInputElement").val();
+        var amount = $("#AmountInputElement").val();
+        $.ajax({
+                method: "POST",
+                url: "/Account/Withdraw",
+                data: { account: accNumber, amount: amount }
+            })
+            .done(function (msg) {
+                alert(msg);
+            });
+
+    });
+    $("#DepositButton").click(function () {
+        var accNumber = $("#AccountInputElement").val();
+        var amount = $("#AmountInputElement").val();
+        $.ajax({
+                method: "POST",
+                url: "/Account/Deposit",
+                data: { account: accNumber, amount: amount }
+            })
+            .done(function (msg) {
+                alert(msg);
+            });
+    });
+});

@@ -7,52 +7,74 @@ namespace KalleFBankALM
 {
     public class BankRepository : IBankRepository
     {
-        //public IQueryable<Account> Accounts = new List<Account>
-        //{
-        //    new Account{}, new Account()
-        //}.AsQueryable<Account>();
-        public IQueryable<Customer> Customers => new List<Customer> {
-            new Customer
-            {
-                CustomerAccounts = new List<Account>
-                {
-                    new Account
-                    {
-                        AccountNumber = "12345",
-                        Balance = 100m
-                    }
-                },
-                CustomerId = 1,
-                Name = "Jens"
-            },
-            new Customer
-            {
-                CustomerAccounts = new List<Account>
-                {
-                    new Account
-                    {
-                        AccountNumber = "54321",
-                        Balance = 200m
-                    }
-                },
-                CustomerId = 2,
-                Name = "Egi"
-            },
-            new Customer
-            {
-                CustomerAccounts = new List<Account>
-                {
-                    new Account
-                    {
-                        AccountNumber = "345123",
-                        Balance = 300m
-                    }
-                },
-                CustomerId = 3,
-                Name = "Kalle"
-            },
+        private IQueryable<Customer> _customers;
 
-        }.AsQueryable<Customer>();
-        
+        public BankRepository()
+        {
+            _customers = new List<Customer> {
+                new Customer
+                {
+                    CustomerAccounts = new List<Account>
+                    {
+                        new Account("12345", 100m)
+                    },
+                    CustomerId = 1,
+                    Name = "Jens"
+                },
+                new Customer
+                {
+                    CustomerAccounts = new List<Account>
+                    {
+                        new Account("54321", 200m)
+                    },
+                    CustomerId = 2,
+                    Name = "Egi"
+                },
+                new Customer
+                {
+                    CustomerAccounts = new List<Account>
+                    {
+                        new Account("345123", 300m)
+                    },
+                    CustomerId = 3,
+                    Name = "Kalle"
+                },
+
+            }.AsQueryable<Customer>();
+        }
+
+        public IQueryable<Customer> Customers { get => _customers; set => _customers = value; }
+
+        //public IQueryable<Customer> Customers => new List<Customer> {
+        //    new Customer
+        //    {
+        //        CustomerAccounts = new List<Account>
+        //        {
+        //            new Account("12345", 100m)
+        //        },
+        //        CustomerId = 1,
+        //        Name = "Jens"
+        //    },
+        //    new Customer
+        //    {
+        //        CustomerAccounts = new List<Account>
+        //        {
+        //            new Account("54321", 200m)
+        //        },
+        //        CustomerId = 2,
+        //        Name = "Egi"
+        //    },
+        //    new Customer
+        //    {
+        //        CustomerAccounts = new List<Account>
+        //        {
+        //            new Account("345123", 300m)
+        //        },
+        //        CustomerId = 3,
+        //        Name = "Kalle"
+        //    },
+
+        //}.AsQueryable<Customer>();
+
     }
 }
