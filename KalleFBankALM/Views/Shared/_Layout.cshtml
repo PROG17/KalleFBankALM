@@ -1,9 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - KalleFBankALM</title>
+    <title>@(Configuration.GetValue<string>("AppName"))</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,14 +28,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">KalleFBankALM</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">@(Configuration.GetValue<string>("AppName"))</a>
             </div>
             <div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li><a asp-area="" asp-controller="Account" asp-action="Index">BankServices</a></li>
-					<li><a asp-area="" asp-controller="Home" asp-action="ListCustomers">Customers</a></li>
-					<li><a asp-area="" asp-controller="Transfer" asp-action="MakeTransfer">Transfer</a></li>
-				</ul>
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Account" asp-action="Index">BankServices</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="ListCustomers">Customers</a></li>
+                    <li><a asp-area="" asp-controller="Transfer" asp-action="MakeTransfer">Transfer</a></li>
+                </ul>
             </div>
         </div>
     </nav>

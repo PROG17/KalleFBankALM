@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using KalleFBankALM.Models;
+using Microsoft.AspNetCore.Hosting;
 
 namespace KalleFBankALM.Controllers
 {
@@ -48,6 +49,7 @@ namespace KalleFBankALM.Controllers
         }
         public IActionResult ListCustomers()
         {
+            
             return View(_bankRepository.Customers);
         }
     }
